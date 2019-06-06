@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <div id="day"></div>
+ <div id="time"></div>
+
+ <script>
+         /* Write a JavaScript program to display the current day and time in the following format. 
+sample Output : Today is : Tuesday. 
+Current time is : 10 PM : 30 : 38 */
+var date =new Date();
+a = date.getDay();
+switch(a)
+{
+             case 0:
+                day:'sunday';
+              break;
+            case 1:
+                day:'Monday'
+            case 2:
+                day = "Tuesday";
+               break;
+             case 3:
+               day = "Wednesday";
+               break;
+             case 4:
+               day = "Thursday";
+               break;
+             case 5:
+               day = "Friday";
+               break;
+             case 6:
+               day = "Saturday";
+           }
+document.getElementById("day").innerHTML="Today day is :"
++ day ;
+var current_time=new Date();
+var hour=current_time.getHours();
+if(hour>12){
+    hour=(hour-12);}
+var current_day= (current_time.getHours()> 12)?"PM":"AM";
+
+document.getElementById("time").innerHTML="current time is "+ " "+ hour +
+""+" "+current_day +":" +current_time.getMinutes() +":"+current_time.getSeconds();
+</script>
+</body>
+</html>

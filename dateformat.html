@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <div id="today_date"></div>
+ <div id="today"></div>
+ <div id="date"></div>
+ <div id="time"></div>
+ <script>
+     var current_time=new Date();
+     var dd=current_time.getDate();
+     var mm=current_time.getMonth()+1;
+     var yyyy=current_time.getFullYear();
+if (dd<10){
+     dd="0"+dd;   
+}
+if (mm<10){
+    mm="0"+mm;
+}
+document.getElementById("today_date").innerHTML="Today is :"+mm+"-"+dd+"-"+yyyy;
+document.getElementById("today").innerHTML="Today is :"+mm+"/"+dd+"/"+yyyy;
+document.getElementById("date").innerHTML="Today is :"+dd+"-"+mm+"-"+yyyy;
+document.getElementById("time").innerHTML="Today is :"+dd+"/"+mm+"/"+yyyy;
+</script>
+</body>
+</html>

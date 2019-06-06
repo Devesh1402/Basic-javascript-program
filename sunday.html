@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <button onclick="abc()">click me</button>
+    <div id="sunday"></div>
+    <script>
+        function abc(){
+
+            var result="";
+        for (var year=2014;year<=2050; year++)
+        {
+               var date = new Date(year,0,1);
+               if(date.getDay()===0){
+                result +="1'st  janaury is being sunday :"+" "+ year +"year </br>"
+            
+                }
+                else{
+                    result +="1'st janaury is not sunday :"+" "+ year +"year </br>";
+                }
+                document.getElementById("sunday").innerHTML=result;
+         }}
+    </script>
+    
+</body>
+</html>
