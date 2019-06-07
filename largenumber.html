@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div><input type="text" id="first_no" value="first"/>
+        </div>
+        <div>
+    <input type="text" id="second_no" value="second"/></div>
+    <button onclick="largenumber()">get the large nuber</button>
+    <div id="large_number"></div>
+    <script>
+        var large="";
+        function largenumber()
+        {
+            var first_number = document.getElementById("first_no").value;
+            var second_number= document.getElementById("second_no").value;
+        if(first_number > second_number)
+        {
+    document.getElementById("large_number").innerHTML= first_number +" is greter than"+second_number;
+        }
+else{
+    document.getElementById("large_number").innerHTML=second_number +"is greter than " + first_number;
+}
+        }
+    </script>
+</body>
+</html>
